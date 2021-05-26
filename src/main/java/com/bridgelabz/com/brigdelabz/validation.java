@@ -6,8 +6,8 @@ import java.util.regex.Pattern;
 
 public class validation {
     public static String s;
-    public boolean FristName()
-    {
+
+    public boolean FristName() {
         System.out.println("enter the first name");
         Scanner input = new Scanner(System.in);
         s = input.nextLine();
@@ -17,8 +17,8 @@ public class validation {
         System.out.println(s);
         return matcher.find();
     }
-    public boolean LastName()
-    {
+
+    public boolean LastName() {
         System.out.println("enter the Last name");
         Scanner input = new Scanner(System.in);
         s = input.nextLine();
@@ -28,4 +28,16 @@ public class validation {
         System.out.println(s);
         return matcher.find();
     }
+
+    public boolean email() {
+        System.out.println("enter the Email name");
+        Scanner input = new Scanner(System.in);
+        s = input.nextLine();
+        String parttern = "[a-z.a-z]+@[a-z0-9+.a-z+in]";
+        Pattern pattern = Pattern.compile(parttern);
+        Matcher matcher = pattern.matcher(s);
+        System.out.println(s);
+        return matcher.find();
+    }
+
 }
