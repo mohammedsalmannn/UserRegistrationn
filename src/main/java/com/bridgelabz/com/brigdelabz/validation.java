@@ -55,7 +55,7 @@ public class validation {
         System.out.println("enter the Password name");
         Scanner input = new Scanner(System.in);
         s = input.nextLine();
-        String parttern = "[*.! @#$%^&(){}[]:;<>,.?/~_+-=|\\]]]{8}";
+        String parttern = "[*.! @#$%^&(){}[]:;<>,.?/~_+-=|\\]]]";
         Pattern pattern = Pattern.compile(parttern);
         Matcher matcher = pattern.matcher(s);
         System.out.println(s);
