@@ -39,11 +39,23 @@ public class validation {
         System.out.println(s);
         return matcher.find();
     }
+
     public boolean mobilel() {
         System.out.println("enter the Mobile name");
         Scanner input = new Scanner(System.in);
         s = input.nextLine();
         String parttern = "^(\\+\\d{1,3}( )?)?((\\(\\d{3}\\))|\\d{3})[- .]?\\d{3}[- .]?\\d{4}$";
+        Pattern pattern = Pattern.compile(parttern);
+        Matcher matcher = pattern.matcher(s);
+        System.out.println(s);
+        return matcher.find();
+    }
+
+    public boolean PassWord() {
+        System.out.println("enter the Password name");
+        Scanner input = new Scanner(System.in);
+        s = input.nextLine();
+        String parttern = "[*.! @#$%^&(){}[]:;<>,.?/~_+-=|\\]]]{8}";
         Pattern pattern = Pattern.compile(parttern);
         Matcher matcher = pattern.matcher(s);
         System.out.println(s);
