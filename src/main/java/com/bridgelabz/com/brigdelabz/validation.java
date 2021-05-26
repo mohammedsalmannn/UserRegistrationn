@@ -17,5 +17,15 @@ public class validation {
         System.out.println(s);
         return matcher.find();
     }
-
+    public boolean LastName()
+    {
+        System.out.println("enter the Last name");
+        Scanner input = new Scanner(System.in);
+        s = input.nextLine();
+        String parttern = "[A-z]+[a-z]{3,}+[0-9]";
+        Pattern pattern = Pattern.compile(parttern);
+        Matcher matcher = pattern.matcher(s);
+        System.out.println(s);
+        return matcher.find();
+    }
 }
